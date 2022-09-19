@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from audit_tools import __VERSION__
+from estimate_sol import __VERSION__
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
