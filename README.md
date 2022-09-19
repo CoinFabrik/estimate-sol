@@ -24,6 +24,12 @@ You can download the project releases from [google-drive](https://drive.google.c
 
 After installing the egg, you can run `estimate-sol` to estimate solidity audits. See different options by running `estimate-sol --help`.
 
+The defaults for the number of lines per week, the number of punctuations per week, the dependencies multiplier and the assembly multiplier can be set via the following environment variables:
+ * ESTIMATE_SOL_DEFAULT_LINES_PER_WEEK
+ * ESTIMATE_SOL_DEFAULT_PUNCTUATIONS_PER_WEEK
+ * ESTIMATE_SOL_DEFAULT_DEPENDENCIES_MULTIPLIER
+ * ESTIMATE_SOL_DEFAULT_ASSEMBLY_MULTIPLIER
+
 ## Run tests
 
 To run all the tests run `python3 -m unittest -v`. See python documentation on how to run unit tests at: https://docs.python.org/3/library/unittest.html#command-line-interface

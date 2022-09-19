@@ -2,18 +2,25 @@
 import sys
 import argparse
 import pathlib
+import os
 
 from . import counter
 from . import __VERSION__
 
+def getenv_with_default(key, default): 
+    rv = os.getenv(key)
+    if rv is None:
+        return default
+    return rv
+
 COUNT_MODES = {
     "lines": {
         "count_fun": counter.count_code_lines,
-        "default_week_size": 1
+        "default_week_size": getenv_with_default("ESTIMATE_SOL_DEFAULT_LINES_PER_WEEK", "1")
     },
     "punct": {
         "count_fun": counter.count_punctuations,
-        "default_week_size": 1
+        "default_week_size": getenv_with_default("ESTIMATE_SOL_DEFAULT_PUNCTUATIONS_PER_WEEK", "1")
     }
 }
 
@@ -33,13 +40,13 @@ def argparser():
     parser.add_argument(
         "--dependencies-multiplier", 
         "-d", 
-        default=0.3,
+        default=float(getenv_with_default("ESTIMATE_SOL_DEFAULT_DEPENDENCIES_MULTIPLIER", "1")),
         type=float,
         help="Multiplier to estimate non-audited dependencies (default=%(default)s)."
     )
     parser.add_argument(
         "--assembly-multiplier",
-        default=2,
+        default=float(getenv_with_default("ESTIMATE_SOL_DEFAULT_ASSEMBLY_MULTIPLIER", "1")),
         type=float,
         help="Multiplier to estimate assembly code (default=%(default)s)."
     )
