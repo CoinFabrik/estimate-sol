@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="coinfabrik-audit-tools",
-    description="Internal tools made by Coinfabrik audit team",
-    url="https://gitlab.com/coinfabrik-private/audit-tools",
-    author="Coinfabrik audits team",
+    name="estimate-sol",
+    description="Script to estimate the size of solidity source code",
+    url="https://github.com/CoinFabrik/estimate-sol",
+    author="Coinfabrik team",
     version=__VERSION__,
     packages=find_packages(),
     python_requires=">=3.8",
