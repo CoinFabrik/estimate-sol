@@ -24,10 +24,6 @@ You can download the project releases from [google-drive](https://drive.google.c
 
 After installing the egg, you can run `estimate-sol` to estimate solidity audits. See different options by running `estimate-sol --help`.
 
-## Estimating clarity audits
-
-For now, in order to estimate clarity audits, you can use the `estimate-clar.py` script. This will not be installed when installing the .egg.
-
 ## Run tests
 
 To run all the tests run `python3 -m unittest -v`. See python documentation on how to run unit tests at: https://docs.python.org/3/library/unittest.html#command-line-interface
