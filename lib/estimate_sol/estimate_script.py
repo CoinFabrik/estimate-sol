@@ -16,11 +16,11 @@ def getenv_with_default(key, default):
 COUNT_MODES = {
     "lines": {
         "count_fun": counter.count_code_lines,
-        "default_week_size": getenv_with_default("ESTIMATE_SOL_DEFAULT_LINES_PER_WEEK", "1")
+        "default_week_size": float(getenv_with_default("ESTIMATE_SOL_DEFAULT_LINES_PER_WEEK", "1"))
     },
     "punct": {
         "count_fun": counter.count_punctuations,
-        "default_week_size": getenv_with_default("ESTIMATE_SOL_DEFAULT_PUNCTUATIONS_PER_WEEK", "1")
+        "default_week_size": float(getenv_with_default("ESTIMATE_SOL_DEFAULT_PUNCTUATIONS_PER_WEEK", "1"))
     }
 }
 
