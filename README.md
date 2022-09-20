@@ -2,7 +2,7 @@
 
 ## Requirements
 
- * python3
+ * python >= 3.8
 
 ## Package generation
 
@@ -10,11 +10,13 @@ This repository contains 2 python projects, each with its own setup.py. The `lib
 
 ## Releases
 
-Releases of the library are published in pypi.
+Releases of the projects are published in pypi.
 
 ## Installation
 
-Install by running `pip install estimate-sol`.
+On ubuntu it requires to install wheels either via `sudo apt install python3-wheel` (if installed in the system wide python) or, if installed in a virtual env, do `pip install wheel` inside de corresponding virtual env before installing.
+
+Install by running `pip install estimate-sol` (`sudo pip3 install estimate-sol` to install system wide in ubuntu). Similar instructions should work for other systems.
 
 ## Estimating solidity audits
 
