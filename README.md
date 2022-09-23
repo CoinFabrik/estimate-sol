@@ -1,5 +1,8 @@
 # estimate-sol
 
+## Public Announcement
+[Python Tool for Sizing Smart Contract Audits in Solidity](https://blog.coinfabrik.com/tools/sizing-solidity-audits/)
+
 ## Requirements
 
  * python >= 3.8
